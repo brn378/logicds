@@ -10,7 +10,7 @@ setuptools.setup(
     author="Barnas Monteith,LogicDS",
     author_email="barnas@engagescience.org",
     description="LogicDS reasoning-based universal language teaching library",
-    long_description=long_description,
+    long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/brn378/logicds",
     packages=setuptools.find_packages(),
