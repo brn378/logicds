@@ -6,6 +6,6 @@ This library focuses on using alternative methods to aid in student understandin
 
 More info about this project can be found at www.logicds.org
 
-This library is distributed under the MIT License. 
+This library is distributed under the MIT License. see LICENSE file for additional information.
 
 
