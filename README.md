@@ -1,5 +1,5 @@
 Welcome to the Logic-DS Library Repository
-by Barnas Monteith, 2024
+by the LogicDS Team, admin: Barnas Monteith, 2024
 
 logic-ds is a Python library aimed at helping students learn functions; in this library we focus on creating functions that gradually introduce students to core programming concepts like inputs, outputs, return values, conditionals, and loops.
 
