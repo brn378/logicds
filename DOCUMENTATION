@@ -1,0 +1,331 @@
+Documentation:  Logic-ds Library v 0.0.1
+
+Logic-DS Math and Data Science   Teaching Library
+This library includes a variety of functions covering fundamental math, set theory, linear regression basics, probability, matrix operations, prime number operations, basic calculus, and descriptive statistics. The functions are organized by category for easy navigation.
+Table of Contents
+1.	Basic Math Functions
+o	Addition of Two Numbers
+o	Multiplication of Two Numbers
+o	Square of a Number
+2.	Set Theory Functions
+o	Union of Sets
+o	Intersection of Sets
+o	Difference of Sets
+o	Subset Check
+3.	Linear Regression Basics
+o	Mean Calculation
+o	Covariance Calculation
+o	Variance Calculation
+o	Linear Regression Slope Calculation
+o	Linear Regression Intercept Calculation
+4.	Probability Functions
+o	Probability of an Event
+o	Combinations Calculation
+o	Permutations Calculation
+5.	Matrix Operations
+o	Matrix Addition
+o	Matrix Transpose
+o	Matrix Multiplication
+6.	Prime Number Functions
+o	Prime Number Check
+7.	Calculus Functions
+o	Derivative Calculation
+8.	Descriptive Statistics Functions
+o	Mean Calculation
+o	Median Calculation
+o	Mode Calculation
+9.	Tuple-related Functions
+o	Tuple Creation and Access
+o	Sum and Product of Two Numbers
+o	Distance Between Points
+
+
+Flat structure:
+Each function is now contained within the MathAndDataFunctions class. This approach makes it easy to create an instance of the class and access each function via the instance. The functions below are grouped according to their categories, keeping the code organized and readable.
+________________________________________
+1.	Basic Math Functions
+•	add_two_numbers(self, a, b)
+o	Description: Returns the sum of two numbers.
+o	Parameters:
+	a (numeric): The first number to be added.
+	b (numeric): The second number to be added.
+o	Returns:
+	numeric: The sum of a and b.
+o	Example:
+ 
+ 
+math = MathAndDataFunctions()
+result = math.add_two_numbers(3, 5)  # Returns 8
+•	multiply_two_numbers(self, a, b)
+o	Description: Returns the product of two numbers.
+o	Parameters:
+	a (numeric): The first number to be multiplied.
+	b (numeric): The second number to be multiplied.
+o	Returns:
+	numeric: The product of a and b.
+o	Example:
+ 
+ 
+math = MathAndDataFunctions()
+result = math.multiply_two_numbers(4, 6)  # Returns 24
+•	calculate_square(self, number)
+o	Description: Returns the square of a given number.
+o	Parameters:
+	number (numeric): The number to be squared.
+o	Returns:
+	numeric: The square of the given number.
+o	Example:
+ 
+ 
+math = MathAndDataFunctions()
+result = math.calculate_square(5)  # Returns 25
+2.	Set Theory Functions
+These functions demonstrate basic operations on sets, such as union, intersection, and subset checks.
+union_of_sets(set1, set2)
+•	Description: Returns the union of two sets.
+•	Parameters:
+o	set1 (set): The first set.
+o	set2 (set): The second set.
+•	Returns: set — a new set containing elements from both set1 and set2.
+•	Example:
+ 
+ 
+union_of_sets({1, 2, 3}, {3, 4, 5})  # Output: {1, 2, 3, 4, 5}
+intersection_of_sets(set1, set2)
+•	Description: Returns the intersection of two sets.
+•	Parameters:
+o	set1 (set): The first set.
+o	set2 (set): The second set.
+•	Returns: set — a new set containing elements common to both set1 and set2.
+•	Example:
+ 
+ 
+intersection_of_sets({1, 2, 3}, {3, 4, 5})  # Output: {3}
+difference_of_sets(set1, set2)
+•	Description: Returns the difference of two sets (elements in set1 but not in set2).
+•	Parameters:
+o	set1 (set): The first set.
+o	set2 (set): The second set.
+•	Returns: set — a new set containing elements from set1 that are not in set2.
+•	Example:
+ 
+ 
+difference_of_sets({1, 2, 3}, {3, 4, 5})  # Output: {1, 2}
+is_subset(subset, superset)
+•	Description: Checks if one set is a subset of another.
+•	Parameters:
+o	subset (set): The smaller set to check.
+o	superset (set): The larger set.
+•	Returns: bool — True if subset is a subset of superset, False otherwise.
+•	Example:
+ 
+ 
+is_subset({1, 2}, {1, 2, 3})  # Output: True
+________________________________________
+3.	Linear Regression Basics
+These functions perform simple calculations related to linear regression, such as slope and intercept.
+mean(values)
+•	Description: Calculates the mean (average) of a list of numbers.
+•	Parameters:
+o	values (list of float): A list of numbers.
+•	Returns: float — the mean of the numbers in values.
+•	Example:
+ 
+ 
+mean([1, 2, 3, 4, 5])  # Output: 3.0
+covariance(x, y)
+•	Description: Calculates the covariance between two lists of numbers.
+•	Parameters:
+o	x (list of float): List of x-values.
+o	y (list of float): List of y-values.
+•	Returns: float — the covariance of x and y.
+•	Example:
+ 
+ 
+covariance([1, 2, 3], [4, 5, 6])  # Output: 0.6666666666666666
+variance(values)
+•	Description: Calculates the variance of a list of numbers.
+•	Parameters:
+o	values (list of float): A list of numbers.
+•	Returns: float — the variance of values.
+•	Example:
+ 
+ 
+variance([1, 2, 3])  # Output: 0.6666666666666666
+linear_regression_slope(x, y)
+•	Description: Calculates the slope of the best-fit line (simple linear regression).
+•	Parameters:
+o	x (list of float): List of x-values.
+o	y (list of float): List of y-values.
+•	Returns: float — the slope of the best-fit line.
+•	Example:
+ 
+ 
+linear_regression_slope([1, 2, 3], [4, 5, 6])  # Output: 1.0
+linear_regression_intercept(x, y)
+•	Description: Calculates the intercept of the best-fit line (simple linear regression).
+•	Parameters:
+o	x (list of float): List of x-values.
+o	y (list of float): List of y-values.
+•	Returns: float — the intercept of the best-fit line.
+•	Example:
+ 
+ 
+linear_regression_intercept([1, 2, 3], [4, 5, 6])  # Output: 3.0
+________________________________________
+4.	Probability Functions
+These functions cover basic probability and combinatorial calculations.
+probability_of_event(event_outcomes, total_outcomes)
+•	Description: Calculates the probability of an event.
+•	Parameters:
+o	event_outcomes (int): The number of successful outcomes.
+o	total_outcomes (int): The total number of possible outcomes.
+•	Returns: float — the probability of the event.
+•	Example:
+ 
+ 
+probability_of_event(3, 10)  # Output: 0.3
+combinations(n, k)
+•	Description: Calculates the number of ways to choose k items from n without replacement.
+•	Parameters:
+o	n (int): Total items.
+o	k (int): Items to choose.
+•	Returns: int — the number of combinations.
+•	Example:
+ 
+ 
+combinations(5, 2)  # Output: 10
+permutations(n, k)
+•	Description: Calculates the number of ways to arrange k items from n.
+•	Parameters:
+o	n (int): Total items.
+o	k (int): Items to arrange.
+•	Returns: int — the number of permutations.
+•	Example:
+ 
+ 
+permutations(5, 2)  # Output: 20
+________________________________________
+5.	Matrix Operations
+These functions perform basic matrix operations like addition, transpose, and multiplication.
+add_matrices(matrix1, matrix2)
+•	Description: Adds two matrices of the same dimensions.
+•	Parameters:
+o	matrix1 (list of lists of int/float): The first matrix.
+o	matrix2 (list of lists of int/float): The second matrix.
+•	Returns: list of lists of int/float — the sum of the two matrices.
+•	Example:
+ 
+ 
+add_matrices([[1, 2], [3, 4]], [[5, 6], [7, 8]])  # Output: [[6, 8], [10, 12]]
+transpose_matrix(matrix)
+•	Description: Returns the transpose of a matrix.
+•	Parameters:
+o	matrix (list of lists of int/float): The input matrix.
+•	Returns: list of lists of int/float — the transposed matrix.
+•	Example:
+ 
+ 
+transpose_matrix([[1, 2], [3, 4]])  # Output: [[1, 3], [2, 4]]
+multiply_matrices(matrix1, matrix2)
+•	Description: Multiplies two matrices.
+•	Parameters:
+o	matrix1 (list of lists of int/float): The first matrix.
+o	matrix2 (list of lists of int/float): The second matrix.
+•	Returns: list of lists of int/float — the product of the matrices.
+•	Example:
+ 
+ 
+multiply_matrices([[1, 2], [3, 4]], [[5, 6], [7, 8]])  # Output: [[19, 22], [43, 50]]
+________________________________________
+6.	Prime Number Functions
+Functions to check if a number is prime and to generate a list of prime numbers up to a given limit.
+is_prime(number)
+•	Description: Checks if a number is prime.
+•	Parameters:
+o	number (int): The number to check.
+•	Returns: bool — True if number is prime, False otherwise.
+•	Example:
+ 
+ 
+is_prime(7)  # Output: True
+
+
+7.	Calculus Functions
+These functions provide basic calculus operations, such as calculating the derivative of a function at a given point.
+derivative(f, x, h=1e-5)
+•	Description: Approximates the derivative of a function f at a given point x using the symmetric difference quotient.
+•	Parameters:
+o	f (function): The function for which to find the derivative.
+o	x (float): The point at which to evaluate the derivative.
+o	h (float, optional): A small value used to approximate the difference; defaults to 1e-5.
+•	Returns: float — the approximate derivative of f at x.
+•	Example:
+ 
+ 
+derivative(lambda x: x**2, 3)  # Output: approximately 6.0
+________________________________________
+8.	Descriptive Statistics Functions
+These functions provide basic descriptive statistics, including mean, median, and mode calculations.
+calculate_mean(values)
+•	Description: Calculates the mean (average) of a list of numbers.
+•	Parameters:
+o	values (list of float): A list of numbers.
+•	Returns: float — the mean of the numbers in values.
+•	Example:
+ 
+ 
+calculate_mean([1, 2, 3, 4, 5])  # Output: 3.0
+calculate_median(values)
+•	Description: Calculates the median of a list of numbers.
+•	Parameters:
+o	values (list of float): A list of numbers.
+•	Returns: float — the median of the numbers in values.
+•	Example:
+ 
+ 
+calculate_median([1, 2, 3, 4, 5])  # Output: 3.0
+calculate_mode(values)
+•	Description: Calculates the mode (most common value) of a list of numbers.
+•	Parameters:
+o	values (list of float): A list of numbers.
+•	Returns: float or int — the mode of the numbers in values.
+•	Example:
+ 
+ 
+calculate_mode([1, 2, 2, 3, 4])  # Output: 2
+________________________________________
+9.	Tuple-related Functions
+These functions demonstrate basic operations with tuples, such as creating tuples and performing tuple-based operations.
+create_and_access_tuple()
+•	Description: Creates a tuple and demonstrates accessing its first and last elements.
+•	Returns: tuple — a tuple containing the first element, the last element, and the entire original tuple.
+•	Example:
+ 
+ 
+create_and_access_tuple()  # Output: (1, 5, (1, 2, 3, 4, 5))
+sum_and_product(a, b)
+•	Description: Calculates both the sum and the product of two numbers and returns them as a tuple.
+•	Parameters:
+o	a (float): The first number.
+o	b (float): The second number.
+•	Returns: tuple — a tuple containing the sum and product of a and b.
+•	Example:
+ 
+ 
+sum_and_product(3, 4)  # Output: (7, 12)
+distance_between_points(point1, point2)
+•	Description: Calculates the Euclidean distance between two points in a 2D space.
+•	Parameters:
+o	point1 (tuple of float): The first point as a tuple (x1, y1).
+o	point2 (tuple of float): The second point as a tuple (x2, y2).
+•	Returns: float — the Euclidean distance between point1 and point2.
+•	Example:
+ 
+ 
+distance_between_points((1, 2), (4, 6))  # Output: 5.0
+________________________________________
+
+
+________________________________________
+2024, LogicDS Team, MIT License
