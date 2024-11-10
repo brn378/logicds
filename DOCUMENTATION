@@ -325,6 +325,10 @@ o	point2 (tuple of float): The second point as a tuple (x2, y2).
  
 distance_between_points((1, 2), (4, 6))  # Output: 5.0
 ________________________________________
+NOTE:
+These are not categorized by math vs data, but one could certainly do that in a structured data science class, or where we want clearly defined function types.  
+•  Math Functions: Basic operations like addition, multiplication, and squaring a number.
+•  Data Functions: Operations typically used in data analysis (mean, median, sorting, etc.).
 
 
 ________________________________________
